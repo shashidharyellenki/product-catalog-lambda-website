@@ -16,7 +16,7 @@ export default function AdminPannel() {
     getData();
   },[]);
 
-// pars ing the items
+// parsing the items
   Adata.map(item=>{
      parsedData.push(JSON.parse(item['Items']));
     GrandTotal = item['GrandTotal']
