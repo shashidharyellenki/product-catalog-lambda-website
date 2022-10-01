@@ -1,0 +1,36 @@
+.Query{
+    display: flex;
+    align-items: center;
+}
+
+.Bag{
+    margin-left: 20px;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: flex-end;
+}
+/* .cart-bag{
+    font-weight: bold;
+    font-style: italic;
+    align-items: center;
+    text-align: center;
+   
+} */
+.back{
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.badge{
+    border-radius: 20%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+.bag-heading{
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+}
