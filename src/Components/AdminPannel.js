@@ -47,7 +47,7 @@ let result=[].concat(...parsedData);
                     <td>{item.productName}</td>
                     <td ><img src={item.Image} style={{height:'3rem', borderRadius:'2px'}} alt={item.productName}/></td>
                     <td>{item.quantity}</td>
-                    <td>{item.price}</td>
+                    <td>{item.price * item.quantity}</td>
                   </tr>
             )
           })
