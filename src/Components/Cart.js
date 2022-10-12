@@ -82,7 +82,7 @@ function Cart() {
       <Row>
         <Col className='cart-total sm={6} md={6} xl={6}'>
             <Button className='btn btn-info' onClick={async()=>{
-            await  axios.post("https://fpv1ifj2og.execute-api.ap-south-1.amazonaws.com/production/",{
+            await  axios.post("https://9gfq42xqgf.execute-api.ap-south-1.amazonaws.com/production/",{
               Items:JSON.stringify(items),
               GrandTotal:cartTotal
             })

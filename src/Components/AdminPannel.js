@@ -2,30 +2,31 @@ import axios from 'axios'
 import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom';
 
-import { Container, ListGroup } from 'react-bootstrap'
+import { Container} from 'react-bootstrap'
 export default function AdminPannel() {
   const [Adata,setData]=useState([])
   const parsedData = [];
-  let GrandTotal=0;
+
  
   useEffect(()=>{
     const getData = async ()=>{
-      const responseData = await axios.get("https://fpv1ifj2og.execute-api.ap-south-1.amazonaws.com/production/");
+      const responseData = await axios.get("https://9gfq42xqgf.execute-api.ap-south-1.amazonaws.com/production/");
       setData(responseData.data);
     }
     getData();
   },[]);
-
+console.log("Adata:////////////////",Adata);
 // parsing the items
   Adata.map(item=>{
      parsedData.push(JSON.parse(item['Items']));
-    GrandTotal = item['GrandTotal']
+    
     
   })
+  console.log("ParsedData--------------", parsedData);
   // converting 2d array to 1d array using spread operator 
 let result=[].concat(...parsedData);
 
-
+console.log("result:********************",result);
   return (
     <Container className='mt-5'>
        <h1>Orders</h1>
